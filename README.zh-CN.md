@@ -14,6 +14,15 @@ CesiumJS **影像瓦片渐变 + 地形 LOD 渐变**独立插件，默认每级 *
 npm install https://github.com/gaopengbin/cesium-lod-transitions/releases/download/v0.1.0/cesium-lod-transitions-0.1.0.tgz cesium@1.145.0 @cesium/engine@26.3.0 @cesium/widgets@16.2.0
 ```
 
+如果当前网络直连 GitHub 下载超时，可改用公开 API 下载同一安装包，无须 token；此路径已实际下载并校验与发布文件完全一致：
+
+```sh
+curl -L -H "Accept: application/octet-stream" https://api.github.com/repos/gaopengbin/cesium-lod-transitions/releases/assets/678027734 -o cesium-lod-transitions-0.1.0.tgz
+npm install ./cesium-lod-transitions-0.1.0.tgz cesium@1.145.0 @cesium/engine@26.3.0 @cesium/widgets@16.2.0
+```
+
+Windows PowerShell 中请使用 `curl.exe`。发布文件的 SHA256 见 Release 中的 `SHA256SUMS.txt`。
+
 ```js
 import * as Cesium from 'cesium'
 import { CesiumLodTransitions } from 'cesium-lod-transitions'

@@ -20,6 +20,15 @@ Alternatively install the tagged Git repository; built files are committed, so c
 npm install github:gaopengbin/cesium-lod-transitions#v0.1.0 cesium@1.145.0 @cesium/engine@26.3.0 @cesium/widgets@16.2.0
 ```
 
+If your network times out on `github.com` release downloads, the public GitHub API provides the same asset without authentication (verified SHA256 `b90a77e5a7e48854cb021a54cfbe25bd8e5f92ad25d259e1f2cb51da125a6033`):
+
+```sh
+curl -L -H "Accept: application/octet-stream" https://api.github.com/repos/gaopengbin/cesium-lod-transitions/releases/assets/678027734 -o cesium-lod-transitions-0.1.0.tgz
+npm install ./cesium-lod-transitions-0.1.0.tgz cesium@1.145.0 @cesium/engine@26.3.0 @cesium/widgets@16.2.0
+```
+
+On Windows PowerShell, use `curl.exe` instead of the `curl` alias.
+
 ## ESM / Vite / application code
 
 Pin the engine/widgets versions shown above. An unconstrained Cesium 1.145.0 installation was observed resolving engine 26.4.0, whose exports broke that Cesium wrapper's ESM build. The plugin's peer constraints and these explicit install versions preserve the tested combination. If your lockfile still nests a different engine under Cesium, use npm `overrides` to pin `@cesium/engine` to `26.3.0` and `@cesium/widgets` to `16.2.0` throughout your application.
