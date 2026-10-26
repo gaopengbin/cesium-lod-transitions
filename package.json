@@ -1,7 +1,7 @@
 {
   "name": "cesium-lod-transitions",
   "version": "0.1.0",
-  "description": "Per-Viewer imagery and experimental terrain LOD transitions for CesiumJS",
+  "description": "参考 Google Earth（谷歌地球）效果的 CesiumJS 影像瓦片渐变与地形 LOD 平滑过渡插件 | Google Earth-inspired imagery crossfade and terrain LOD transitions",
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
@@ -16,7 +16,7 @@
     "./browser": "./dist/cesium-lod-transitions.global.js",
     "./package.json": "./package.json"
   },
-  "files": ["dist", "README.md", "README.zh-CN.md", "CHANGELOG.md", "VALIDATION.md", "LICENSE"],
+  "files": ["dist", "README.md", "README.zh-CN.md", "README.en.md", "CHANGELOG.md", "VALIDATION.md", "LICENSE"],
   "sideEffects": false,
   "scripts": {
     "build": "node scripts/build.mjs",
@@ -31,7 +31,7 @@
   "engines": {"node": ">=22"},
   "license": "MIT",
   "author": "gaopengbin",
-  "keywords": ["cesium", "terrain", "imagery", "lod", "transition", "webgl", "gis"],
+  "keywords": ["cesium", "cesiumjs", "google-earth", "lod", "level-of-detail", "imagery", "imagery-transition", "tile-fading", "tile-transition", "terrain", "terrain-lod", "terrain-rendering", "crossfade", "smooth-zoom", "3d-globe", "webgl", "gis", "typescript", "npm-plugin", "谷歌地球", "影像瓦片渐变", "瓦片缩放过渡", "地形渐变", "地形LOD", "父子网格交接", "平滑缩放", "三维地球", "Cesium插件"],
   "repository": {"type": "git", "url": "git+https://github.com/gaopengbin/cesium-lod-transitions.git"},
   "bugs": {"url": "https://github.com/gaopengbin/cesium-lod-transitions/issues"},
   "homepage": "https://github.com/gaopengbin/cesium-lod-transitions#readme"
