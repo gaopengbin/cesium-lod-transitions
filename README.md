@@ -8,7 +8,13 @@ Per-Viewer **imagery tile cross-fading** and **experimental terrain LOD handoffs
 
 ## Install
 
-This release is distributed through GitHub Releases. It is **not published to the npm registry**.
+Install from the npm registry:
+
+```sh
+npm install cesium-lod-transitions@0.1.0 cesium@1.145.0 @cesium/engine@26.3.0 @cesium/widgets@16.2.0
+```
+
+The original GitHub Release bundle is also available:
 
 ```sh
 npm install https://github.com/gaopengbin/cesium-lod-transitions/releases/download/v0.1.0/cesium-lod-transitions-0.1.0.tgz cesium@1.145.0 @cesium/engine@26.3.0 @cesium/widgets@16.2.0

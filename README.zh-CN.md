@@ -8,7 +8,13 @@ CesiumJS **影像瓦片渐变 + 地形 LOD 渐变**独立插件，默认每级 *
 
 ## 安装与引入
 
-当前通过 **GitHub Release** 发布，尚未发布到 npm 官方仓库；可用 npm 安装 Release 中的独立包：
+可直接从 **npm 官方源** 安装：
+
+```sh
+npm install cesium-lod-transitions@0.1.0 cesium@1.145.0 @cesium/engine@26.3.0 @cesium/widgets@16.2.0
+```
+
+也可以安装原始 **GitHub Release** 中的独立包：
 
 ```sh
 npm install https://github.com/gaopengbin/cesium-lod-transitions/releases/download/v0.1.0/cesium-lod-transitions-0.1.0.tgz cesium@1.145.0 @cesium/engine@26.3.0 @cesium/widgets@16.2.0
