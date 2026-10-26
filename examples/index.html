@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cesium LOD Transitions · 插件示例</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/cesium/Widgets/widgets.css">
+  <link rel="stylesheet" href="/examples/style.css">
+  <script>window.CESIUM_BASE_URL = '/cesium/'</script>
+  <script src="/cesium/Cesium.js"></script>
+  <script type="module" src="/examples/main.js"></script>
+</head>
+<body>
+  <main>
+    <div id="globe" aria-label="Cesium 影像与地形过渡示例"></div>
+    <header class="product-bar"><div><div class="brand-name">Cesium LOD Transitions</div><div class="brand-tagline">独立插件 · 原版 Cesium · 0.1.0</div></div><span class="badge">PLUGIN</span></header>
+    <aside class="panel" aria-label="插件控制面板">
+      <p class="eyebrow">IMAGERY + TERRAIN</p>
+      <h1>两种过渡，一个插件</h1>
+      <p class="intro" id="source">程序生成地形与分级诊断影像。插件直接挂接当前 Viewer，可分别开关两种过渡。</p>
+      <div class="field-label">影像瓦片渐变</div>
+      <div class="segmented"><button id="image-on" aria-pressed="true">开启影像渐变</button><button id="image-off" aria-pressed="false">影像原始切换</button></div>
+      <div class="field-label">地形网格渐变</div>
+      <div class="segmented"><button id="terrain-on" aria-pressed="true">开启地形渐变</button><button id="terrain-off" aria-pressed="false">地形原始切换</button></div>
+      <div class="field-label">固定视角 · 精度</div>
+      <div class="segmented"><button id="coarse" aria-pressed="true">粗网格</button><button id="fine" aria-pressed="false">细网格</button></div>
+      <div class="field-label">交接时长</div>
+      <div class="duration-buttons"><button data-duration="300" aria-pressed="false">0.3 s</button><button data-duration="800" aria-pressed="true">0.8 s</button><button data-duration="1600" aria-pressed="false">1.6 s</button></div>
+      <div class="actions"><button id="play" class="button primary">播放精度交接</button><button id="reset" class="button secondary">回到初始视角</button><button id="debug" class="button secondary" aria-pressed="false">显示地形交接区域</button></div>
+      <div class="metrics"><div><span id="image-active" class="metric-value">0</span><span class="metric-label">影像渐变</span></div><div><span id="terrain-active" class="metric-value">0</span><span class="metric-label">地形渐变</span></div><div><span id="extra" class="metric-value">0</span><span class="metric-label">附加网格 MB</span></div></div>
+      <div class="status" id="status" role="status"><span class="status-dot"></span><span id="status-text">正在加载…</span></div>
+      <p class="footnote">Cesium 1.145.x · 单个不透明影像图层<br>地形渐变属于实验功能，尚未保证无接缝。</p>
+    </aside>
+    <div class="map-caption"><span class="caption-dot"></span><span>拖动旋转 · 滚轮缩放</span></div>
+    <div class="credits" id="credits"></div>
+  </main>
+</body>
+</html>

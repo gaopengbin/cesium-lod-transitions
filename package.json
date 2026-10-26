@@ -1,0 +1,38 @@
+{
+  "name": "cesium-lod-transitions",
+  "version": "0.1.0",
+  "description": "Per-Viewer imagery and experimental terrain LOD transitions for CesiumJS",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "browser": "./dist/index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./browser": "./dist/cesium-lod-transitions.global.js",
+    "./package.json": "./package.json"
+  },
+  "files": ["dist", "README.md", "README.zh-CN.md", "CHANGELOG.md", "VALIDATION.md", "LICENSE"],
+  "sideEffects": false,
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test test/*.test.js",
+    "typecheck": "tsc --noEmit -p test/tsconfig.json",
+    "dev": "node scripts/serve.mjs",
+    "prepack": "npm run build && npm test && npm run typecheck"
+  },
+  "peerDependencies": {"cesium": "1.145.x", "@cesium/engine": "26.3.0", "@cesium/widgets": "16.2.0"},
+  "devDependencies": {"cesium": "1.145.0", "esbuild": "0.27.4", "typescript": "5.9.3"},
+  "overrides": {"cesium": {"@cesium/engine": "26.3.0", "@cesium/widgets": "16.2.0"}},
+  "engines": {"node": ">=22"},
+  "license": "MIT",
+  "author": "gaopengbin",
+  "keywords": ["cesium", "terrain", "imagery", "lod", "transition", "webgl", "gis"],
+  "repository": {"type": "git", "url": "git+https://github.com/gaopengbin/cesium-lod-transitions.git"},
+  "bugs": {"url": "https://github.com/gaopengbin/cesium-lod-transitions/issues"},
+  "homepage": "https://github.com/gaopengbin/cesium-lod-transitions#readme"
+}
